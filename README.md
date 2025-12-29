@@ -4,10 +4,6 @@
 
 ![Image](https://i.etsystatic.com/6700327/r/il/da2b23/5794157959/il_1080xN.5794157959_elaj.jpg)
 
-![Image](https://storage.googleapis.com/sheet-user-uploaded-media/27839-f9f8001c-3042-11f0-a294-c21c0571f92c.jpeg)
-
-![Image](https://m.media-amazon.com/images/I/81TswM1QL-L._AC_UF1000%2C1000_QL80_.jpg)
-
 ![Image](https://bluerootsmedia.com/wp-content/uploads/2025/08/cristi-caval-V3F18sonn7k-unsplash-scaled.jpeg)
 
 ---
