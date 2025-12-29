@@ -6,6 +6,9 @@
 
 ![Image](https://bluerootsmedia.com/wp-content/uploads/2025/08/cristi-caval-V3F18sonn7k-unsplash-scaled.jpeg)
 
+
+https://chatgpt.com/share/6952f727-7758-8013-be51-722b408bbc07
+
 ---
 
 ### 🧭 עיקרון־על (חד וברור)
