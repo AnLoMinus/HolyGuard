@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HolyGuard — מלכודות קודש (72)</title>
+  <meta name="description" content="72 מלכודות קודש לפי 72 שמות (צירופים) — רפואה מונעת, מתכונים ביתיים, תרומה יומית, וכלים להפסקת עישון." />
+  <style>
+    :root{
+      --bg0:#06070b;
+      --bg1:#0b1020;
+      --card:#0e1633cc;
+      --card2:#0d132acc;
+      --line:#2a3566;
+      --txt:#eaf0ff;
+      --mut:#b9c6ff;
+      --mut2:#93a6ff;
+      --good:#6dffb3;
+      --warn:#ffd36d;
+      --bad:#ff6d8a;
+      --acc:#7c5cff;
+      --acc2:#2ee8ff;
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --r: 22px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Arial, "Noto Sans Hebrew", sans-serif;
+      color:var(--txt);
+      background:
+        radial-gradient(1200px 900px at 80% 10%, rgba(124,92,255,.22), transparent 55%),
+        radial-gradient(900px 700px at 10% 30%, rgba(46,232,255,.18), transparent 60%),
+        radial-gradient(1200px 900px at 50% 120%, rgba(109,255,179,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      min-height:100vh;
+    }
+
+    header{
+      padding:26px 18px 14px;
+      max-width:1200px;
+      margin:0 auto;
+    }
+
+    .hero{
+      border:1px solid rgba(42,53,102,.65);
+      border-radius: var(--r);
+      background: linear-gradient(135deg, rgba(14,22,51,.75), rgba(13,19,42,.65));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        radial-gradient(700px 240px at 80% 0%, rgba(46,232,255,.18), transparent 60%),
+        radial-gradient(700px 240px at 20% 100%, rgba(124,92,255,.22), transparent 60%);
+      pointer-events:none;
+    }
+
+    .hero-inner{
+      position:relative;
+      padding:22px 18px;
+      display:grid;
+      gap:14px;
+    }
+
+    h1{
+      margin:0;
+      font-size: clamp(22px, 3vw, 34px);
+      letter-spacing:.3px;
+      line-height:1.2;
+    }
+
+    .sub{
+      margin:0;
+      color:var(--mut);
+      line-height:1.55;
+      font-size: 14.5px;
+      max-width: 900px;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:center;
+    }
+
+    .chip{
+      border:1px solid rgba(42,53,102,.8);
+      background: rgba(6,7,11,.35);
+      color: var(--mut);
+      padding:8px 10px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      backdrop-filter: blur(8px);
+    }
+
+    .chip b{color:var(--txt); font-weight:650}
+    .chip .dot{width:8px; height:8px; border-radius:50%;}
+    .dot.good{background:var(--good)}
+    .dot.warn{background:var(--warn)}
+    .dot.acc{background:var(--acc2)}
+
+    main{
+      max-width:1200px;
+      margin: 14px auto 40px;
+      padding: 0 18px;
+    }
+
+    .panel{
+      display:grid;
+      gap:12px;
+      margin: 16px 0 14px;
+      grid-template-columns: 1.2fr .9fr .9fr .9fr;
+    }
+
+    @media (max-width: 980px){
+      .panel{ grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 560px){
+      .panel{ grid-template-columns: 1fr; }
+    }
+
+    .control{
+      border:1px solid rgba(42,53,102,.75);
+      background: rgba(14,22,51,.45);
+      border-radius: 16px;
+      padding: 12px 12px;
+      box-shadow: 0 10px 28px rgba(0,0,0,.35);
+      backdrop-filter: blur(10px);
+    }
+
+    label{
+      display:block;
+      font-size: 12px;
+      color: var(--mut2);
+      margin-bottom: 8px;
+    }
+
+    input[type="search"], select{
+      width:100%;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border:1px solid rgba(42,53,102,.85);
+      background: rgba(6,7,11,.35);
+      color: var(--txt);
+      outline:none;
+    }
+    input[type="search"]::placeholder{color:#a8b7ff99}
+
+    .btnrow{
+      display:flex; gap:10px; flex-wrap:wrap;
+      align-items:center;
+      justify-content: space-between;
+    }
+
+    .btn{
+      cursor:pointer;
+      user-select:none;
+      border:1px solid rgba(42,53,102,.9);
+      background: linear-gradient(135deg, rgba(124,92,255,.22), rgba(46,232,255,.12));
+      color: var(--txt);
+      padding: 10px 12px;
+      border-radius: 14px;
+      font-weight:650;
+      font-size: 13px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.35);
+      transition: transform .08s ease, filter .12s ease;
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+    }
+    .btn:active{ transform: translateY(1px) scale(.99); }
+    .btn.secondary{
+      background: rgba(6,7,11,.3);
+      color: var(--mut);
+      font-weight:600;
+    }
+
+    .stats{
+      color: var(--mut);
+      font-size: 13px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 980px){ .grid{grid-template-columns: repeat(2, 1fr);} }
+    @media (max-width: 560px){ .grid{grid-template-columns: 1fr;} }
+
+    details{
+      border:1px solid rgba(42,53,102,.65);
+      border-radius: var(--r);
+      background: rgba(14,22,51,.42);
+      box-shadow: 0 12px 26px rgba(0,0,0,.35);
+      overflow:hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    summary{
+      list-style:none;
+      cursor:pointer;
+      padding: 14px 14px;
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content: space-between;
+    }
+
+    summary::-webkit-details-marker{display:none}
+
+    .topline{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .badge{
+      font-size: 12px;
+      border:1px solid rgba(42,53,102,.85);
+      background: rgba(6,7,11,.35);
+      padding: 6px 10px;
+      border-radius: 999px;
+      color: var(--mut);
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .name3{
+      font-size: 18px;
+      font-weight: 850;
+      letter-spacing: 2px;
+      padding: 6px 10px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(124,92,255,.28), rgba(46,232,255,.12));
+      border:1px solid rgba(124,92,255,.42);
+    }
+
+    .title{
+      font-weight: 800;
+      color: var(--txt);
+    }
+
+    .meta{
+      color: var(--mut2);
+      font-size: 12px;
+    }
+
+    .body{
+      padding: 0 14px 14px;
+      display:grid;
+      gap:10px;
+    }
+
+    .section{
+      border:1px dashed rgba(147,166,255,.35);
+      border-radius: 16px;
+      padding: 10px 12px;
+      background: rgba(6,7,11,.22);
+    }
+
+    .h{
+      font-size: 12px;
+      color: var(--mut2);
+      margin-bottom: 6px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight: 750;
+    }
+
+    .p{
+      margin:0;
+      color: var(--txt);
+      line-height:1.55;
+      font-size: 13.5px;
+    }
+
+    .k{
+      display:flex; flex-wrap:wrap; gap:8px; margin-top: 10px;
+    }
+
+    .tag{
+      font-size: 11.5px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      border:1px solid rgba(42,53,102,.75);
+      color: var(--mut);
+      background: rgba(6,7,11,.25);
+    }
+
+    footer{
+      max-width: 1200px;
+      margin: 18px auto 38px;
+      padding: 0 18px;
+      color: var(--mut);
+      font-size: 13px;
+      line-height:1.6;
+    }
+
+    .quote{
+      border-right: 4px solid rgba(46,232,255,.55);
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(14,22,51,.35);
+      border:1px solid rgba(42,53,102,.55);
+      margin-top: 12px;
+      color: var(--txt);
+    }
+
+    .small{
+      color: var(--mut2);
+      font-size: 12px;
+    }
+
+    .rap{
+      margin-top: 12px;
+      border:1px solid rgba(124,92,255,.35);
+      background: rgba(6,7,11,.25);
+      border-radius: 14px;
+      padding: 12px 12px;
+      color: var(--txt);
+    }
+    .rap b{color: var(--acc2)}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="hero">
+    <div class="hero-inner">
+      <h1>🛡️ HolyGuard — מלכודות קודש (72)</h1>
+      <p class="sub">
+        מערכת “מלכודות” שמכוונות את היום למסלול של <b>רפואה מונעת</b> 🌿:
+        במקום לכבות סימפטומים — בונים יסודות שמונעים נפילה (ובעיקר: <b>נשימה נקייה ללא עישון</b> 🚭).
+        כל כרטיס כולל: 🧿 צירוף (3 אותיות), 🧠 חוק מניעה קצר, 🥗 מתכון ביתי, 🤝 תרומה יומית.
+      </p>
+      <div class="chips">
+        <span class="chip"><span class="dot acc"></span><b>72</b> כרטיסים</span>
+        <span class="chip"><span class="dot good"></span><b>רפואה מונעת</b> לפני טיפול</span>
+        <span class="chip"><span class="dot warn"></span><b>אנטי־עישון</b> כבסיס</span>
+        <span class="chip">📆 היום: <b id="todayTxt"></b></span>
+        <span class="chip">⏰ שעה: <b id="timeTxt"></b></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="panel">
+    <div class="control">
+      <label>🔎 חיפוש לפי צירוף / כותרת / תגיות</label>
+      <input id="q" type="search" placeholder="לדוגמה: נשימה, מים, חמלה, או צירוף כמו והו" autocomplete="off" />
+    </div>
+
+    <div class="control">
+      <label>🧱 יסוד (Element)</label>
+      <select id="element">
+        <option value="">הכול</option>
+        <option value="Air">אוויר 🌬️</option>
+        <option value="Water">מים 💧</option>
+        <option value="Fire">אש 🔥</option>
+        <option value="Earth">אדמה 🌱</option>
+      </select>
+    </div>
+
+    <div class="control">
+      <label>🎯 מיקוד (Focus)</label>
+      <select id="focus">
+        <option value="">הכול</option>
+        <option value="Breath">נשימה 🚭</option>
+        <option value="Mind">מוח/תודעה 🧠</option>
+        <option value="Heart">לב/רגש ❤️</option>
+        <option value="Home">בית/סביבה 🏠</option>
+      </select>
+    </div>
+
+    <div class="control">
+      <label>🧰 פעולות מהירות</label>
+      <div class="btnrow">
+        <button class="btn" id="openAll">📂 פתח הכול</button>
+        <button class="btn secondary" id="closeAll">📁 סגור הכול</button>
+        <button class="btn secondary" id="copyPlan">📋 העתק “תכנית יום נקי”</button>
+      </div>
+      <div class="stats" style="margin-top:10px;">
+        📊 מוצגים: <b id="count"></b> / 72
+      </div>
+    </div>
+  </section>
+
+  <section class="grid" id="grid"></section>
+</main>
+
+<footer>
+  <div class="small">
+    ✅ הצירופים (72) מובאים כמסורת של שלשות־אותיות הנלמדות מ־שמות יד:יט–כא (סידור הצירופים בטבלה). :contentReference[oaicite:0]{index=0}
+  </div>
+
+  <div class="quote">
+    📜 <b>פסוק לחיזוק (בריאות ומניעה)</b><br/>
+    “<b>וְנִשְׁמַרְתֶּם מְאֹד לְנַפְשֹׁתֵיכֶם</b>” (דברים ד׳:ט״ו)
+  </div>
+
+  <div class="rap">
+    🎤 <b>פזמון ראפ (4 שורות)</b><br/>
+    מלכודת קודש—אני קם, לא נשבר, זה חוק!<br/>
+    בלי עשן בריאות בדם, הנשימה עושה “פוק”!<br/>
+    מים במקום אש, תודעה עולה גבוה,<br/>
+    HolyGuard בשטח—אור בבית, כוח לנצח כל תאווה!
+  </div>
+
+  <div class="small" style="margin-top:12px;">
+    🧭 <b>מספר המידות:</b> 13 מידות הרחמים
+  </div>
+
+  <div class="small" style="margin-top:10px;">
+    🔗 <b>קרדיטים (מקורות):</b>
+    הטבלה של צירופי 72 — Chabad/KabbalaOnline :contentReference[oaicite:1]{index=1}
+  </div>
+</footer>
+
+<script>
+  // 🗓️ תאריך ושעה (מקומי דפדפן)
+  const fmtDate = new Intl.DateTimeFormat('he-IL', { weekday:'long', year:'numeric', month:'2-digit', day:'2-digit' });
+  const fmtTime = new Intl.DateTimeFormat('he-IL', { hour:'2-digit', minute:'2-digit', second:'2-digit' });
+  const now = new Date();
+  document.getElementById('todayTxt').textContent = fmtDate.format(now);
+  document.getElementById('timeTxt').textContent = fmtTime.format(now);
+
+  // 📌 72 הצירופים — לפי הטבלה המופיעה במקור (9 שורות × 8)
+  const NAMES = (
+`והו ילי סיט עלם מהש ללה אכא כהת
+הזי אלד לאו ההע יזל מבה הרי הקם
+לאו כלי לוו פהל נלך ייי מלה חהו
+נתה האא ירת שאה ריי אום לכב ושר
+יחו להח כוק מנד אני חעם רעה ייז
+ההה מיכ וול ילה סאל ערי עשל מיה
+והו דני החש עמם ננא נית מבה פוי
+נמם ייל הרח מצר ומב יהה ענו מחי
+דמב מנק איע חבו ראה יבמ היי מום`
+  ).split(/\s+/).filter(Boolean);
+
+  // 🎛️ קטגוריות כדי לתת “טעם” אחיד ועם זאת מגוון
+  const ELEMENTS = ["Air","Water","Fire","Earth"];
+  const FOCUSES  = ["Breath","Mind","Heart","Home"];
+
+  const TITLE_A = ["מגן","שער","חותם","אור","מפתח","סולם","מעגל","שדה","מצפן"];
+  const TITLE_B = ["נשימה","מים","שקט","אמת","חמלה","דיוק","שמחה","יציבות","טהרה"];
+  const TRAP = ["מלכודת","חוק","נדר","ברית","שמירה","שגרה","תמרור","תיקון","מנעול"];
+
+  function pick(arr, i){ return arr[i % arr.length]; }
+
+  // 🧠 “רפואה מונעת” — סט חוקים קצרים שחוזרים בתבונה
+  const PREVENT = [
+    "🚭 לפני דחף: 6 נשימות עמוקות (4 שנ׳ שאיפה, 6 שנ׳ נשיפה) — ואז רק מחליטים.",
+    "💧 שתה כוס מים מלאה לפני כל החלטה ‘קטנה’ — המוח חוזר להוביל.",
+    "🍋 משהו חמוץ/מרענן (לימון/נענע) סוגר ‘חיפוש ניקוטין’ בפה.",
+    "🧂 החלפה חכמה: במקום עישון — פרי/ירק קראנצ׳י (גזר/מלפפון) 2 דקות.",
+    "🚶 תזוזת־איפוס: 60 שנ׳ הליכה/עלייה מדרגות — הדחף יורד.",
+    "🧼 ניקוי טריגרים: להוציא מצתים/מאפרות מהחדר — הבית נהיה “אזור נקי”.",
+    "📝 משפט־אמת: ‘אני לא חייב להגיב לדחף’ — חוזר 3 פעמים בלב.",
+    "🧊 קר: מים קרים בפה/מקלחת קצרה — ‘מחליפה’ את האות של הדחף.",
+    "🕯️ הדלקת אור/נר: סימן מוחי של התחלה נקייה — לא “עוד פעם”."
+  ];
+
+  // 🥗 מתכונים ביתיים — קצרים, ברי־ביצוע, “מניעה”
+  const RECIPES = [
+    {t:"🥗 סלט נשימה ירוק", s:"מלפפון, פטרוזיליה, לימון, שמן זית, מלח עדין. קיצוץ דק + ערבוב."},
+    {t:"🍵 תה נענע-לימון", s:"נענע טרייה, לימון, מים חמים. 7 דקות חליטה, בלי סוכר."},
+    {t:"🥣 שיבולת שועל מהירה", s:"שיבולת שועל, מים/חלב, קינמון, בננה. 5 דקות על אש קטנה."},
+    {t:"🥤 מים עם תפוח-קינמון", s:"פרוסות תפוח + מקל קינמון בבקבוק מים. 30 דקות במקרר."},
+    {t:"🍲 מרק עדין לניקוי", s:"בצל, גזר, קישוא, סלרי. בישול 25 דק׳, תיבול קל."},
+    {t:"🍳 חביתה נקייה", s:"2 ביצים, בצל ירוק, עגבנייה. מחבת חמה, 4 דקות."},
+    {t:"🍚 אורז-כוסמת מאוזן", s:"אורז/כוסמת, מלח, שמן זית. בישול רגיל, מנה קטנה."},
+    {t:"🫐 קערת פירות צבע", s:"תפוח/בננה/ענבים/אוכמניות. חותכים ומגישים מיד."},
+    {t:"🥕 קרנצ׳י גזר-טחינה", s:"גזר חתוך + טחינה עם לימון ומים. דיפ מהיר."}
+  ];
+
+  // 🤝 תרומה יומית — “בריאה” במעשה
+  const DONATION = [
+    "🤲 תרומה: הודעה טובה לאדם אחד — בלי ביקורת, רק חיזוק.",
+    "🧺 תרומה: להכין צלחת/כוס שתייה למישהו בבית.",
+    "🪙 תרומה: לשים מטבע בקופה/צדקה (או החלטה לתרום בהמשך היום).",
+    "🧹 תרומה: 3 דקות סדר בפינה אחת — ניקוי חיצוני=פנימי.",
+    "☎️ תרומה: להתקשר לשאול ‘מה שלומך באמת?’ ולהקשיב.",
+    "🕊️ תרומה: למחוק משפט שלילי שהיה בדרך להישלח, ולנסח מחדש באהבה.",
+    "📖 תרומה: לקרוא פסקה קצרה של חיזוק ולהוציא ממנה מעשה אחד.",
+    "🍞 תרומה: להכין משהו קטן ולחלוק — אפילו פרי חתוך.",
+    "🙏 תרומה: תפילה קצרה על אדם אחר — לפני הבקשה על עצמך."
+  ];
+
+  function buildItem(i){
+    const n = NAMES[i];
+    const element = ELEMENTS[i % 4];
+    const focus = FOCUSES[i % 4];
+
+    const title = `${pick(TITLE_A,i)} ${pick(TITLE_B,i+2)} — ${pick(TRAP,i+1)}`;
+    const rule = PREVENT[(i*2) % PREVENT.length];
+    const recipe = RECIPES[(i*3) % RECIPES.length];
+    const donate = DONATION[(i*5) % DONATION.length];
+
+    const tags = [
+      `#${element}`,
+      `#${focus}`,
+      "#Preventive",
+      "#NoSmoke",
+      "#HolyGuard"
+    ];
+
+    const metaTxt = `${element} • ${focus} • כרטיס ${String(i+1).padStart(2,'0')}/72`;
+
+    return { idx:i+1, name:n, title, element, focus, rule, recipe, donate, tags, metaTxt };
+  }
+
+  const ITEMS = Array.from({length:72}, (_,i)=>buildItem(i));
+
+  const grid = document.getElementById('grid');
+  const count = document.getElementById('count');
+
+  function cardHTML(item){
+    const tags = item.tags.map(t=>`<span class="tag">${t}</span>`).join("");
+    return `
+      <details class="card"
+        data-name="${item.name}"
+        data-title="${item.title}"
+        data-element="${item.element}"
+        data-focus="${item.focus}"
+        data-tags="${item.tags.join(' ')}"
+      >
+        <summary>
+          <div class="topline">
+            <span class="name3">${item.name}</span>
+            <span class="badge">🧩 #${String(item.idx).padStart(2,'0')}</span>
+            <span class="title">${item.title}</span>
+          </div>
+          <span class="meta">${item.metaTxt}</span>
+        </summary>
+
+        <div class="body">
+          <div class="section">
+            <div class="h">🛑 חוק מניעה (Anti-Trigger)</div>
+            <p class="p">${item.rule}</p>
+          </div>
+
+          <div class="section">
+            <div class="h">🥗 מתכון ביתי קצר</div>
+            <p class="p"><b>${item.recipe.t}</b><br>${item.recipe.s}</p>
+          </div>
+
+          <div class="section">
+            <div class="h">🤝 תרומה / בריאה במעשה</div>
+            <p class="p">${item.donate}</p>
+          </div>
+
+          <div class="section">
+            <div class="h">🎯 “בכל עין” — תרגיל ראייה</div>
+            <p class="p">
+              הסתכל סביב 10 שניות: מצא <b>3 דברים טובים</b> (צבע/אור/סדר),
+              ואז החלטה אחת: <b>מה אני עושה עכשיו במקום עישון?</b>
+            </p>
+          </div>
+
+          <div class="k">${tags}</div>
+        </div>
+      </details>
+    `;
+  }
+
+  function render(list){
+    grid.innerHTML = list.map(cardHTML).join("");
+    count.textContent = String(list.length);
+  }
+
+  // 🔎 פילטרים
+  const qEl = document.getElementById('q');
+  const elementEl = document.getElementById('element');
+  const focusEl = document.getElementById('focus');
+
+  function apply(){
+    const q = (qEl.value || "").trim().toLowerCase();
+    const el = elementEl.value;
+    const fc = focusEl.value;
+
+    const filtered = ITEMS.filter(x=>{
+      const hitQ = !q || (
+        x.name.includes(qEl.value.trim()) ||
+        x.title.toLowerCase().includes(q) ||
+        x.tags.join(" ").toLowerCase().includes(q)
+      );
+      const hitE = !el || x.element === el;
+      const hitF = !fc || x.focus === fc;
+      return hitQ && hitE && hitF;
+    });
+
+    render(filtered);
+  }
+
+  qEl.addEventListener('input', apply);
+  elementEl.addEventListener('change', apply);
+  focusEl.addEventListener('change', apply);
+
+  // 📂 פתיחה/סגירה
+  document.getElementById('openAll').addEventListener('click', ()=>{
+    document.querySelectorAll('details').forEach(d=>d.open=true);
+  });
+  document.getElementById('closeAll').addEventListener('click', ()=>{
+    document.querySelectorAll('details').forEach(d=>d.open=false);
+  });
+
+  // 📋 העתק תכנית יום נקי
+  document.getElementById('copyPlan').addEventListener('click', async ()=>{
+    const plan =
+`HolyGuard — תכנית יום נקי 🚭
+
+1) בבוקר: כוס מים + 6 נשימות (4/6)
+2) לפני דחף: מים / פרי קראנצ'י / 60 שנ' תזוזה
+3) בצהריים: מנה פשוטה + 10 דק' הליכה
+4) ערב: סידור טריגרים בבית + תה נענע-לימון
+5) תרומה יומית: מילה טובה / עזרה קטנה / צדקה
+6) משפט אמת: "אני לא חייב להגיב לדחף."
+
+היום אני בוחר נשימה נקייה.`;
+
+    try{
+      await navigator.clipboard.writeText(plan);
+      alert("הועתק ✅");
+    }catch(e){
+      prompt("העתק ידנית:", plan);
+    }
+  });
+
+  // Init
+  render(ITEMS);
+  count.textContent = "72";
+</script>
+</body>
+</html>
